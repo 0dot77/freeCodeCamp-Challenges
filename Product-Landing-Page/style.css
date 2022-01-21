@@ -1,0 +1,45 @@
+/* reset pre doc setting */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background: lightcoral;
+}
+
+#nav-bar .container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-image {
+  width: 50%;
+}
+
+img {
+  width: 400px;
+  height: 40px;
+}
+
+.container ul {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.container ul li a {
+  color: black;
+  text-decoration-line: none;
+}
+
+.screen-main {
+  padding-top: 80px;
+}
