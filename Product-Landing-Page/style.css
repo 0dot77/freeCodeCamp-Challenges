@@ -41,5 +41,133 @@ img {
 }
 
 .screen-main {
-  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.screen-main__container {
+  display: flex;
+  width: 1000px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+}
+
+/* screen-main__contents */
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-main__contents {
+  display: flex;
+  width: 930px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.contents-icon {
+  color: #ff8c00;
+}
+
+.contents-texts {
+  width: 830px;
+}
+
+/* screen-video */
+.screen-video {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+/* section */
+.screen-payment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.screen-payment__container {
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.payment-box {
+  width: 310px;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.payment-box h3 {
+  display: flex;
+  background: #eeeeee;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-box span {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.payment-box ul {
+  width: 180px;
+  text-align: center;
+  line-height: 1.5;
+  list-style: none;
+}
+.payment-box button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+  background: #f1c40e;
+  margin-bottom: 15px;
+}
+
+/* footer */
+
+.screen-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.screen-footer__container {
+  display: flex;
+  background: #dddddd;
+  flex-direction: column;
+  width: 1000px;
+  padding: 20px;
+}
+
+.policy {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copyright {
+  display: flex;
+  justify-content: flex-end;
 }
