@@ -5,11 +5,15 @@
   padding: 0;
 }
 
+body {
+  background: #eeeeee;
+}
+
 #nav-bar {
   position: fixed;
   width: 100%;
   height: 80px;
-  background: lightcoral;
+  background: #eeeeee;
 }
 
 #nav-bar .container {
@@ -56,10 +60,36 @@ img {
 
 #hero {
   display: flex;
+  height: 135px;
   flex-direction: column;
-  margin-bottom: 150px;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
 }
 
+#hero form {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+#hero form input:first-child {
+  width: 270px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+#hero form input:first-child::placeholder {
+  padding-left: 5px;
+}
+
+#hero form input:last-child {
+  width: 150px;
+  height: 30px;
+  border: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  background: #f1c40e;
+}
 /* screen-main__contents */
 
 #form {
@@ -71,7 +101,7 @@ img {
 
 .screen-main__contents {
   display: flex;
-  width: 930px;
+  width: 800px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 80px;
@@ -82,7 +112,7 @@ img {
 }
 
 .contents-texts {
-  width: 830px;
+  width: 700px;
 }
 
 /* screen-video */
@@ -119,7 +149,7 @@ img {
 
 .payment-box h3 {
   display: flex;
-  background: #eeeeee;
+  background: #dddddd;
   width: 100%;
   height: 50px;
   justify-content: center;
@@ -165,9 +195,81 @@ img {
 .policy {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+.policy span {
+  margin-right: 15px;
+  font-size: 18px;
 }
 
 .copyright {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  /* nav-bar */
+
+  #nav-bar {
+    height: 130px;
+  }
+
+  #nav-bar .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-image {
+    margin-bottom: 10px;
+  }
+
+  .container .nav-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container ul {
+    font-size: 18px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* main-screen */
+  .screen-main {
+    padding-top: 150px;
+  }
+
+  .screen-main__contents {
+    width: 100%;
+  }
+
+  #hero {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .contents-icon {
+    display: none;
+  }
+
+  .contents-texts {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* payment */
+
+  .screen-payment__container {
+    flex-direction: column;
+  }
+
+  .payment-box {
+    margin-bottom: 10px;
+  }
 }
