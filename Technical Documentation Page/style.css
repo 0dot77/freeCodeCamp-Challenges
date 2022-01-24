@@ -1,0 +1,136 @@
+:root {
+    --section-header__size : 30px;    
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display:flex;
+    width:100%;
+}
+
+/* NAVIGATION BAR */
+
+#navbar {
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    width:300px;
+    height:100%;
+    border-right:3px solid gray;
+    position:fixed;
+}
+
+#navbar header{
+    display:block;
+    padding:15px 25px;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    font-weight: 200;
+}
+
+#navbar a{
+    display:block;
+    padding:15px 30px;
+    border-bottom: 1px solid gray;
+    color:black;
+    text-decoration: none;
+    opacity: 0.6;
+    font-weight:300;
+}
+
+#navbar a:last-child {
+    border-bottom: none;
+}
+
+#navbar header {
+    font-size:30px;
+}
+
+/* -------------- */
+
+/* MAIN SCTIONS */
+
+#main-doc {
+    flex:3;
+    padding-left: 300px;
+}
+
+
+#main-doc header {
+    font-size: var(--section-header__size);
+    font-weight: 200;
+    padding:20px 45px;
+}
+
+.main-section__contents {
+    padding:0px 50px;
+    font-weight: 200;
+}
+
+.main-section__contents p,
+.main-section__contents li {
+    margin-bottom: 25px;
+}
+
+.main-section__contents ul {
+    padding-left: 60px;
+}
+
+.main-section__contents pre {
+    white-space: pre-line;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left : 10px;
+    background : #F7F7F7;
+    border: 1px solid #F7F7F7;
+    border-radius: 5px;
+    margin-top : -10px;
+    margin-bottom:10px;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width:768px) {
+    body {
+        display:flex;
+        flex-direction: column;
+    }
+
+    #navbar {
+        position: relative;
+        width:100%;
+        border-right:1px solid gray;
+        border-bottom: 3px solid gray;
+        overflow: auto;
+    }
+
+    .navbar-container {
+        height:270px;
+    }
+
+    .navbar-header {
+        position:fixed;
+        width:100%;
+        background: white;
+        z-index: 1;
+    }
+    .navbar-header header {
+        background: white;
+    }
+
+    .navbar-contents {
+        z-index: 0;
+        padding-top:65px;
+    }
+    #main-doc {
+        width:100%;
+        padding-left: 0px;
+    }
+}
