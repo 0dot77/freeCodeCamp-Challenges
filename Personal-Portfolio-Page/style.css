@@ -1,0 +1,50 @@
+@import '/component.css';
+
+:root {
+    --main-blue : #45567d;
+    --main-red : #BE3143;
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    height:100vh;
+    width:100%;
+    font-family:'Poppins', sans-serif;
+}
+
+/* WELCOME SECTION */
+
+#welcome-section {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:865px;
+    background: linear-gradient(to right, gray, black);
+}
+
+.welcome-container {
+    color:white;
+}
+
+.welcome-container h1 {
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.welcome-container h3 {
+    text-align: center;
+    font-style: italic;
+    font-size:2rem;
+    color:var(--main-red);
+}
+
+/* PROJECT SECTION */
+
+#projects {
+    height:1200px;
+}
