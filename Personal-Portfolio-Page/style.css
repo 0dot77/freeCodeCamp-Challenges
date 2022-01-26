@@ -3,6 +3,8 @@
 :root {
     --main-blue : #45567d;
     --main-red : #BE3143;
+    --main-black :#303841;
+    --main-font : #ffff;
 }
 
 * {
@@ -23,17 +25,17 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    height:865px;
+    height:100vh;
     background: linear-gradient(to right, gray, black);
 }
 
 .welcome-container {
-    color:white;
+    color:var(--main-font);
 }
 
 .welcome-container h1 {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .welcome-container h3 {
@@ -46,5 +48,211 @@ body {
 /* PROJECT SECTION */
 
 #projects {
-    height:1200px;
+    background: var(--main-blue);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    height:1400px;
+}
+
+.projects-container {
+    display:grid;
+    justify-content: center;
+    width:100%;
+    grid-template-columns: repeat(3, 400px);
+    gap: 35px;
+}
+
+.project-tile {
+    display: flex;
+    justify-content: center;
+    width : 400px;
+    height: 460px;
+    box-shadow: 1px 0px 0px black;
+}
+
+#projects h1 {
+    border-bottom: 1px solid white;
+    color: var(--main-font);
+    font-size: 2.5rem;
+}
+
+.project-tile a{
+    width:100%;
+    height:100%;
+    background: var(--main-black);
+    text-decoration: none;
+}
+
+.project-tile__texts {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.project-tile__texts > span:first-child {
+    margin-right:5px;
+}
+
+.project-tile__texts > span:last-child {
+    margin-left:5px;
+}
+
+.project-tile__link span {
+    margin-top:10px;
+    color: orangered;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.project-tile__link:hover span {
+    opacity: 1;
+}
+
+.project-tile h2 {
+    text-align: center;
+    color:var(--main-font);
+    padding-top:10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.project-tile img {
+    object-fit: cover;
+    width:400px;
+    height:390px;
+}
+
+.project-all button{
+    font-family:'Poppins', sans-serif;
+    font-size:20px;
+    width:150px;
+    height:50px;
+    border: 0px;
+    color:var(--main-font);
+    font-weight:500;
+    background: var(--main-black);
+    transition: background .3s ease-in;
+}
+
+.project-all button > i {
+    width:20px;
+    transition: padding-left .3s ease-in;
+}
+
+.project-all button:hover > i {
+    padding-left: 5px;
+}
+
+.project-all button:hover {
+    background:var(--main-red);
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    width:100%;
+    height:100vh;
+    background: var(--main-black);
+    border-bottom: 3px solid var(--main-red);
+}
+
+.contact-section__container {
+    display: flex;
+    height:100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.contact-section__container h1 {
+    font-size:60px;
+}
+
+.contact-section__container h3 {
+    font-style: italic;
+}
+
+.contact-section__container-socials {
+    display:flex;
+    width:50%;
+    justify-content: space-evenly;
+    margin-top:50px;
+    text-shadow: 1px 1px black;
+}
+
+.contact-section__container-socials a {
+    color:white;
+    text-decoration: none;
+    font-size:25px;
+    height:20px;
+    transition: padding-top 0.3s ease;
+}
+
+.contact-section__container-socials a > i {
+    margin-right:5px;
+}
+
+.contact-section__container-socials a:hover {
+    padding-top:10px;
+}
+
+@media(max-width: 75em) {
+
+    #projects {
+        width:100%;
+        height:3500px;
+    }
+
+    #projects h1 {
+        width:95%;
+        text-align: center;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section__container h1 {
+        text-align: center;
+    }
+
+    .contact-section__container-socials {
+        width:95%;
+        height:150px;
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        /* margin-bottom: 10px; */
+    }
+
+    .footer-section {
+        display:flex;
+        width:100%;
+        height:150px;
+        justify-content: center;
+    }
+
+    .footer-section p {
+        display: block;
+        font-size:15px;
+    }
+
+    .footer-section p:first-child {
+        padding-left : 30px;
+    }
+
+    .footer-section p:last-child {
+        padding-right:30px;
+    }
+
 }
